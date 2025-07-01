@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test_5</title>
+</head>
+<body>
+    <h1 id="h1"> </h1>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <h2 id="h2"> screen</h2>
+    <h3 id="h3"></h3>
+    <hr>
+    <h4 id="btn" style="background-color: rgb(183, 151, 213);color: aliceblue; display: inline-block;">A Short note of nature.</h4><br>
+    <button  onclick="clickMe()">click me</button>
+    <hr>
+    <ul id="screen">
+        <li>screen height</li>
+        <li>screen width</li>
+        <li>screen color depth</li>
+    </ul>
+    <button onclick=" addListItem()"> new order list is here</button>
+    <ul id="myList">
+<hr>
+<form id="form">
+     <label for="Name">Name :</label>
+        <input type="text " placeholder="First name" id="first name" >
+        <input type="text " placeholder="Last name name" id="last name"><br><br>
+        <label for="age" id="age">Age :</label>
+        <input type="number" placeholder="enter your age" id="age" > <br><br>
+        <input type="submit">
+</form>
+<div id="div">
+    <h1>Julie De Nul</h1>
+    <p>
+        The turnover continued to grow to 2.9 billion euro, a record in the history of the Group. This led to an increase in EBITDAwith 39% to 610 million euro or 21% on turnover, globally resulting in a strong profit of 296 million euro
+    </p>
+    <input type="submit">
+</div>
+
+    
+
+    <script>
+        let x=document.getElementById("h1")
+        x.innerHTML="screen height:"+screen.height
+        console.log("x")
+        let a=document.getElementById("p1")
+        a.innerHTML="screen width:"+screen.width
+        console.log("a")
+        let b=document.getElementById("p2")
+        b.innerHTML="screen colorDepth:"+screen.colorDepth
+        console.log("b")
+        let y=document.getElementById("h2")
+        y.innerHTML="Current URL:"+ window.location
+        console.log("y")
+        let z=document.getElementById("h3")
+        z.innerHTML="browser name:"+navigator.userAgent
+        console.log("z")
+
+        let d=document.getElementById("btn")
+        console.log(d)
+        function clickMe(){
+            d.innerHTML="Nature is the ultimate source of our living. Both living and non-living things include nature, and everyone is interdependent, which helps maintain the ecosystem. Plants, animals, and humans all depend on nature for their survival. It supplies oxygen, sunlight, soil, water, and other necessary components."
+            d.style.backgroundColor="bisque"
+            d.style.color="green"
+        }
+        function addListItem(){
+            let ul=document.getElementById("screen")
+            let li=document.createElement("li")
+            li.textContent="new list"
+             ul.appendChild(li)
+        }
+        let form=document.getElementById("form")
+        form.addEventListener('submit',(event)=>{
+            let  first=document.getElementById("first name").value
+            let last=document.getElementById("last name").value
+            let age=document.getElementById("age").value
+             alert("Your application is submitted Successfully!");
+        })
+      let parent=document.getElementById("div")
+           let children=parent.children
+          console.log(children)
+
+        
+    </script>
+</body>
+</html>
